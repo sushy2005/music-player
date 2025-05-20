@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Player</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="player-container">
+    <div class="drag-region"></div>
+    <!-- Circles -->
+    <div class="circles">
+      <div class="circle red"></div>
+      <div class="circle green"></div>
+      <div class="circle blue"></div>
+      <div class="circle yellow"></div>
+    </div>
+
+    <!-- Author Image -->
+    <div class="author-image" id="authorImage">
+      <img src="assets/author.jpg" alt="author" >
+    </div>
+
+    <!-- Song Info Row -->
+    <div class="song-info-row">
+      <div class="song-text">
+        <div class="song-name">Is this love?</div>
+        <div class="author-name">by XG</div>
+      </div>
+      <img src="assets/heart.png" alt="Heart" class="heart-icon" />
+    </div>
+    <div class="progress-container">
+      <span id="currentTime">0:00</span>
+      <input type="range" id="progressBar" value="0" min="0" max="100">
+      <span id="duration">0:00</span>
+    </div>
+    <div class="custom-controls">
+      <img src="assets/previous.png" alt="Previous" id="prevButton" class="control-button small" />
+      
+      <img src="assets/play.png" alt="Play" id="playButton" class="control-button" />
+      <img src="assets/pause.png" alt="Pause" id="pauseButton" class="control-button hidden" />
+      
+      <img src="assets/skip.png" alt="Next" id="nextButton" class="control-button small" />
+    </div>
+    
+    <!-- Player -->
+    <div class="player">
+      <audio id="audio"  style="display: none;">
+        <source src="assets/song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- Footer Icons -->
+<div class="footer-icons">
+  <img src="assets/spotify.png" alt="Spotify" class="icon-small" />
+  <div class="sound-waves">
+    <img src="assets/sound-wave.png" alt="Wave" class="icon-small" />
+    <img src="assets/sound-wave.png" alt="Wave" class="icon-small" />
+    <img src="assets/sound-wave.png" alt="Wave" class="icon-small" />
+  </div>
+</div>
+
+  </div>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

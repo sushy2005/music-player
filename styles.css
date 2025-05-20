@@ -1,0 +1,247 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #a393eb;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .drag-region {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-app-region: drag;
+    background-color: transparent; /* Keep transparent or give it a subtle shade */
+    z-index: 999;
+  }
+  .control-button,
+  .heart-icon,
+  button,
+  input,
+  audio {
+    -webkit-app-region: no-drag;
+  }
+    
+  .player-container {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    background: #a393eb;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  
+  .circles {
+    display: flex;
+    flex-direction: row;     /* Arrange horizontally */
+    gap: 10px;
+    margin-bottom: 20px;     /* Space below the circles */
+    justify-content: center; 
+    /* Center the circles inside the container */
+    width: 100%;
+  }
+  
+  .circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+  
+  .circle.red {
+    background-color: #27296d;
+  }
+  
+  .circle.green {
+    background-color: #5e63b6;
+  }
+  
+  .circle.blue {
+    background-color:rgb(132, 118, 194);
+  }
+  
+  .circle.yellow {
+    background-color: #f5c7f7;
+  }
+  
+  
+  .author-image {
+    width: 100%;
+    height:auto;
+    background-color: #ddd;
+    margin-bottom: 20px;
+   
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius: 0; /* No curves = more pixel feel */
+    box-shadow:
+      0 0 0 6px #5e63b6,   /* Inner "pixel" border */
+      0 0 0 7px  #f5c7f7;
+  }
+  
+  .author-image img {
+  
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .song-info-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    color: #27296d;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .song-text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .song-name {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .author-name {
+    font-size: 14px;
+    opacity: 0.85;
+    margin-top: 2px;
+    font-family: 'Caveat', cursive;
+  }
+  
+  .heart-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    color:  #f5c7f7;
+  }
+  .author-name {
+    font-size: 14px;
+    opacity: 0.85;
+    font-family: "Caveat", cursive;
+  }
+  .player {
+    flex: 1;
+    width: 100%;
+  
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  audio {
+    width: 100%;
+    outline: none;
+  }
+  
+  .control-button {
+    width: 100px;
+    height:  100px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    
+  }
+  
+  .control-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .control-button.small {
+    width: 50px;
+    height:  50px;
+  }
+  
+  .custom-controls {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 20px;
+  }
+  
+  .progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0 5px;
+    gap: 10px;
+    font-size: 12px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #27296d;
+  }
+  
+  #progressBar {
+    flex: 1;
+    appearance: none;
+    height: 5px;
+    background: #5e63b6;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  #progressBar::-webkit-slider-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f5c7f7;
+    cursor: pointer;
+  }
+  
+  
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  
+  .sound-waves {
+    display: flex;
+  
+  }
+  
+  .icon-small {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: transform 0.2s ease;
+  }
+  
+  .icon-small:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  
